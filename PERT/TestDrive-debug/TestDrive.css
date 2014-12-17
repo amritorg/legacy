@@ -1,0 +1,14 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+
+global
+{
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12;
+	content-background-alpha: 1.0;
+	text-align: center;
+}
+	
