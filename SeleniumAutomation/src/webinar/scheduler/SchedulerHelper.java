@@ -24,7 +24,7 @@ public abstract class SchedulerHelper extends CommonHelper {
 	}
 
 	/**
-	 * This method is to logon to create a new webinar. Data input should be be
+	 * This method is to create a new webinar.Data input should be be
 	 * provided from respective data properties file.
 	 * 
 	 * @param webinarTitle
@@ -33,6 +33,14 @@ public abstract class SchedulerHelper extends CommonHelper {
 	 *            input for the occurence
 	 * @param xDays
 	 *            Number of days from now to schedule the webinar
+	 * @param startTime
+	 *            Time to start the webinar
+	 * @param endTime
+	 *            Time to end the webinar
+	 * @param startAmPm
+	 *            Start Time in morning (AM) or post noon (PM)
+	 * @param endAmPm
+	 *            End Time in morning (AM) or post noon (PM)
 	 * @return targetDay Day on which webinar has been scheduled
 	 * @throws InterruptedException
 	 */
@@ -68,7 +76,6 @@ public abstract class SchedulerHelper extends CommonHelper {
 		this.waitAndClick(SchedulerPageMap.endTime);
 		SchedulerPageMap.endTime.clear();
 		this.setText(SchedulerPageMap.endTime, endTime);
-		// TODO set endtTime AmPm
 		SchedulerPageMap.endTime.sendKeys(Keys.TAB);
 		Thread.sleep(1000);
 		SchedulerPageMap.endTimeAmPmTrig.click();
